@@ -1,25 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Portal Index</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fb;
+            color: #1b2430;
+        }
+
+        header {
+            background: #1b2430;
+            color: #ffffff;
+            padding: 32px 24px;
+        }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 24px 48px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 0 0 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        a {
+            display: block;
+            padding: 14px 18px;
+            border-radius: 10px;
+            background: #ffffff;
+            text-decoration: none;
+            color: #1b2430;
+            box-shadow: 0 6px 16px rgba(27, 36, 48, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 18px rgba(27, 36, 48, 0.16);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #e5eefc;
+            color: #1b4fbf;
+            margin-top: 4px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Student Login</h1>
-    <input type="password" id="passwordInput" placeholder="Enter password">
-    <button onclick="checkPassword()">Submit</button> 
-    <p id="errorMsg" style="color:red; display:none;">Wrong password!</p>
-    <script>
-        function checkPassword() {
-            let userPassword = document.getElementById("passwordInput").value;
-            
-            if (userPassword === "techno") {
-                window.location.href = "technos.html";
-            } 
-            else {
-                // SHOW error message
-                document.getElementById("errorMsg").style.display = "block";
-            }
-        }
-    </script>
+    <header>
+        <h1>Student Portal Index</h1>
+        <p>Quick links to class resources and student lists.</p>
+    </header>
+    <main>
+        <p>Use the links below to navigate to the available pages.</p>
+        <ul>
+            <li>
+                <a href="technos.html">
+                    View TECHNOs list
+                    <span class="tag">Roster</span>
+                </a>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>
